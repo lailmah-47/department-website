@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Computer Science Department</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">CS Department</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="faculty.html">Faculty</a></li>
+          <li><a href="admissions.html">Admissions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <p>Get in touch with the Computer Science Department</p>
+    </div>
+  </section>
+
+  <!-- Contact Information Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Department Contact Information</h2>
+      </div>
+      <div class="contact-info">
+        <div class="info-box">
+          <h3>Main Office</h3>
+          <p>Science Building, Room 201</p>
+          <p>123 University Avenue</p>
+          <p>Tech City, ST 12345</p>
+        </div>
+        <div class="info-box">
+          <h3>Phone & Email</h3>
+          <p><strong>Main Line:</strong> (555) 123-4567</p>
+          <p><strong>Department:</strong> cs.dept@university.edu</p>
+          <p><strong>Admissions:</strong> admissions@university.edu</p>
+        </div>
+        <div class="info-box">
+          <h3>Office Hours</h3>
+          <p><strong>Monday - Friday:</strong> 9:00 AM - 5:00 PM</p>
+          <p><strong>Lunch Hour:</strong> 12:00 PM - 1:00 PM</p>
+          <p><strong>Closed:</strong> Weekends & University Holidays</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faculty Office Hours Section -->
+  <section class="section" style="background-color: #f5f5f5;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Faculty Office Hours</h2>
+      </div>
+      <p style="text-align: center; margin-bottom: 2rem; color: #666;">Individual faculty members maintain office hours for student consultations. Contact the main office for specific faculty locations and schedules, or visit our <a href="faculty.html">Faculty page</a> for detailed information.</p>
+      <div style="max-width: 900px; margin: 0 auto;">
+        <p style="background-color: white; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #0066cc;">
+          <strong>Drop-in Help:</strong> The department help desk is available in Science Building, Room 205 during regular office hours (9:00 AM - 5:00 PM, Monday-Friday) for general questions and technical support.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Send us a Message</h2>
+      </div>
+      <form id="contactForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required placeholder="John Doe">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="john@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" placeholder="(555) 123-4567">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Subject *</label>
+          <input type="text" id="subject" name="subject" required placeholder="How can we help?">
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" name="category" style="width: 100%; padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; font-size: 1rem; font-family: inherit;">
+            <option value="">-- Select a category --</option>
+            <option value="admissions">Admissions Inquiry</option>
+            <option value="courses">Course Information</option>
+            <option value="faculty">Faculty Inquiry</option>
+            <option value="technical">Technical Support</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required placeholder="Please share your question or inquiry..."></textarea>
+        </div>
+
+        <div style="margin-top: 2rem; text-align: center;">
+          <button type="submit" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem; border: none; cursor: pointer;">Send Message</button>
+          <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">We'll get back to you within 24-48 business hours</p>
+        </div>
+      </form>
+      <div id="successMessage" style="display: none; margin-top: 2rem; padding: 1.5rem; background-color: #e8f5e9; border: 1px solid #4caf50; border-radius: 8px; color: #2e7d32; text-align: center;">
+        <h3 style="margin-top: 0;">Thank you for your message!</h3>
+        <p>We've received your inquiry and will respond within 24-48 business hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional Resources Section -->
+  <section class="section" style="background-color: #f5f5f5;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Additional Resources</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+        <div>
+          <h3 style="color: #0066cc; margin-bottom: 1rem;">Quick Links</h3>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 0.5rem;"><a href="index.html">Home</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="courses.html">View Courses</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="faculty.html">Meet Faculty</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="admissions.html">Admissions</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color: #0066cc; margin-bottom: 1rem;">For Current Students</h3>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 0.5rem;"><a href="#">Student Portal</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#">Course Registration</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#">Academic Calendar</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#">Tutoring Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color: #0066cc; margin-bottom: 1rem;">For Prospective Students</h3>
+          <ul style="list-style: none;">
+            <li style="margin-bottom: 0.5rem;"><a href="admissions.html">Apply Now</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#">Schedule a Campus Tour</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#">View Scholarships</a></li>
+            <li style="margin-bottom: 0.5rem;"><a href="#">Financial Aid Info</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map/Location Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Location</h2>
+      </div>
+      <div style="background-color: #e8e8e8; border-radius: 8px; padding: 3rem; text-align: center; color: #666;">
+        <p>Science Building, Room 201</p>
+        <p>123 University Avenue, Tech City, ST 12345</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">
+          Located on the main campus near the library and student center. 
+          <br>Parking available in Lots A and B.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Computer Science Department</h4>
+          <p>Building the future of technology through education and research.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact Info</h4>
+          <p><strong>Email:</strong> cs.dept@university.edu</p>
+          <p><strong>Phone:</strong> (555) 123-4567</p>
+          <p><strong>Office:</strong> Science Building, Room 201</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Computer Science Department. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      // Get form values for logging (optional)
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        subject: document.getElementById('subject').value,
+        category: document.getElementById('category').value,
+        message: document.getElementById('message').value
+      };
+      
+      console.log('Form submitted:', formData);
+      
+      // Reset form
+      document.getElementById('contactForm').reset();
+      
+      // Show success message
+      document.getElementById('successMessage').style.display = 'block';
+      
+      // Scroll to success message
+      document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        document.getElementById('successMessage').style.display = 'none';
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
